@@ -95,13 +95,18 @@ def runRainbow():
 
 @app.route('/ColorWipeRed')
 def runColorWipeRed():
-    colorWipe(strip,Color(255, 0, 0))
+    colorWipe(strip,Color(0, 255, 0))
     return "ColorWipeRed"
 
 @app.route('/ColorWipeBlue')
 def runColorWipeBlue():
-    colorWipe(strip,Color(0, 255, 0))
+    colorWipe(strip,Color(0, 0, 255))
     return "ColorWipeBlue"
+
+@app.route('/ColorWipeGreen')
+def runColorWipeBlue():
+    colorWipe(strip,Color(255, 0, 0))
+    return "ColorWipeGreen"
 
 
 if __name__ == '__main__':
