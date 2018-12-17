@@ -94,18 +94,15 @@ def runRainbow():
 
 
 @app.route('/ColorWipeRed')
-def runRainbow():
+def runColorWipeRed():
     colorWipe(strip,Color(255, 0, 0))
     return "ColorWipeRed"
 
 @app.route('/ColorWipeBlue')
-def runRainbow():
+def runColorWipeBlue():
     colorWipe(strip,Color(0, 255, 0))
     return "ColorWipeBlue"
 
 
 if __name__ == '__main__':
-    strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
-    # Intialize the library (must be called once before other functions).
-    strip.begin()
     app.run(host='0.0.0.0')
