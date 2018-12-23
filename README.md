@@ -10,3 +10,5 @@ Add in **/etc/rc.local**
 su pi -c bash /home/pi/dev/pizero-leds/src/sh/boot.sh
 ```
 
+
+or create a systemd service
