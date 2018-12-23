@@ -113,5 +113,10 @@ def runRainbowCycle():
     rainbowCycle(strip)
     return "RainbowCycle"
 
+@app.route('/theaterChaseRainbow')
+def runTheaterChaseRainbow():
+    theaterChaseRainbow()
+    return "theaterChaseRainbow"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
