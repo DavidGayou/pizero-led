@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 cd /home/pi/dev/pizero-led/
-sleep 1
+sleep 10
 echo "Git fetch from pizero-led"
 /usr/bin/git fetch
 echo "git reset --hard on origin"
