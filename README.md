@@ -3,12 +3,16 @@
 First install the library as stated in https://github.com/jgarff/rpi_ws281x
 
 
-## Pull on reboot
+## Pull on startup and launch the controller
 
-Add in **/etc/rc.local**
+Copy the systemd service 
 ```
-su pi -c bash /home/pi/dev/pizero-leds/src/sh/boot.sh
+sudo cp src/systemd/pizero-led.service /lib/systemd/system/
 ```
 
+Then enable it
+```
+sudo systemctl enable pizero-led.service
+```
 
-or create a systemd service on startup
+it will launch the src/sh/boot.sh at startup
