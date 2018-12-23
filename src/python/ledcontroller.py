@@ -115,7 +115,7 @@ def runRainbowCycle():
 
 @app.route('/theaterChaseRainbow')
 def runTheaterChaseRainbow():
-    theaterChaseRainbow()
+    theaterChaseRainbow(strip)
     return "theaterChaseRainbow"
 
 if __name__ == '__main__':
