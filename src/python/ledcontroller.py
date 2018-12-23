@@ -104,7 +104,7 @@ def runColorWipeBlue():
     return "ColorWipeBlue"
 
 @app.route('/ColorWipeGreen')
-def runColorWipeBlue():
+def runColorWipeGreen():
     colorWipe(strip,Color(255, 0, 0))
     return "ColorWipeGreen"
 
