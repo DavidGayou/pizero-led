@@ -76,7 +76,6 @@ def theaterChaseRainbow(strip, wait_ms=50):
 
 
 
-
 app = Flask(__name__)
 
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
@@ -118,5 +117,10 @@ def runTheaterChaseRainbow():
     theaterChaseRainbow(strip)
     return "theaterChaseRainbow"
 
+@app.route('/clear')
+def runClear():
+    colorWipe(strip, Color(0,0,0), 10)
+    return "clear"
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
