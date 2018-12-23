@@ -108,6 +108,10 @@ def runColorWipeBlue():
     colorWipe(strip,Color(255, 0, 0))
     return "ColorWipeGreen"
 
+@app.route('/RainbowCycle')
+def runRainbowCycle():
+    rainbowCycle(strip)
+    return "RainbowCycle"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
