@@ -1,0 +1,10 @@
+[Unit]
+ Description=pizero -led controller service
+ After=multi-user.target
+
+ [Service]
+ Type=idle
+ ExecStart=/usr/bin/bash /home/pi/dev/pizero-led/src/sh/boot.sh > /home/pi/dev/pizero-led/boot.log 2>&1
+
+ [Install]
+ WantedBy=multi-user.target
