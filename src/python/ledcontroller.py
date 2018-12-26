@@ -13,6 +13,27 @@ LED_BRIGHTNESS = 255  # Set to 0 for darkest and 255 for brightest
 LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 
+#LED Dress specific values
+LED_PER_RIBBON = 30
+RIBBON_COUNT = 10
+
+
+
+def setDressPixel(strip, ribbon_pos, pos_in_ribbon, color):
+    """Color a specific led in the dress by providing the riboon and the pos in ribbon"""
+    strip.setPixelColor(ribbon_pos*LED_PER_RIBBON + pos_in_ribbon, color)
+
+def fillDressDown(strip, color):
+    """Color the dress row by row from up to bottom"""
+    for lpos in range(LED_PER_RIBBON):
+        for rpos in range(RIBBON_COUNT):
+            setDressPixel(strip, rpos, lpos, color)
+
+def fillDressUp(strip, color):
+    """Color the dress row by row from up to bottom"""
+    for lpos in range(LED_PER_RIBBON):
+        for rpos in range(RIBBON_COUNT):
+            setDressPixel(strip, rpos, LED_PER_RIBBON - 1 - lpos, color)
 
 
 
