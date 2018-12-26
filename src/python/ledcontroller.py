@@ -39,25 +39,52 @@ def fillDressUp(strip, color, wait_ms=50):
             strip.show()
         time.sleep(wait_ms/1000.0)
 
-def dressSpiralDown(strip, color, wait_ms=50):
-    iter = 0
-    step = 3
+def dressSpiralDown(strip, color, iter=10, step=3, wait_ms=50):
     prevpos =0
-
     litLed=dict()
 
+    for iter in range(0, iterCount):
+        for rpos in range(0, RIBBON_COUNT):
+            if !litLed[rpos]:
+                litLed[rpos]=[] 
+            
+            #Clean the leds 
+            for i in litLed[rpos]:
+                setDressPixel(strip, rpos, i, Color(0,0,0))
+            strip.show()
 
-    for rpos in range(0, RIBBON_COUNT):
-        if !litLed[rpos]:
-            litLed[rpos]=[] 
-        for i in range(0,step):
-            p = (prevpos+i) % LED_PER_RIBBON
-            setDressPixel(strip, rpos, p, color)
-            litLed[rpos]=litLed[rpos]+p
-        prevpos = (prevpos + step) %LED_PER_RIBBON
+            for i in range(0,step):
+                p = (prevpos+i) % LED_PER_RIBBON
+                setDressPixel(strip, rpos, p, color)
+                litLed[rpos]=litLed[rpos].append(p)
+            prevpos = (prevpos + step) %LED_PER_RIBBON
 
-        strip.show()
-        time.sleep(wait_ms/1000.0)
+            strip.show()
+            time.sleep(wait_ms/1000.0)
+
+def dressSpiralUp(strip, color, iter=10, step=3, wait_ms=50):
+    prevpos =0
+    litLed=dict()
+
+    for iter in range(0, iterCount):
+        for rpos in range(0, RIBBON_COUNT):
+            if !litLed[rpos]:
+                litLed[rpos]=[] 
+            
+            #Clean the leds 
+            for i in litLed[rpos]:
+                setDressPixel(strip, rpos, i, Color(0,0,0))
+            strip.show()
+
+            for i in range(0,step):
+                p = (prevpos+i) % LED_PER_RIBBON
+                setDressPixel(strip, rpos, p, color)
+                litLed[rpos]=litLed[rpos].append(p)
+            prevpos = (prevpos + step) %LED_PER_RIBBON
+
+            strip.show()
+            time.sleep(wait_ms/1000.0)
+
 
 
 # Define functions which animate LEDs in various ways.
@@ -169,6 +196,17 @@ def runTheaterChaseRainbow():
 def runClear():
     colorWipe(strip, Color(0,0,0), 10)
     return "clear"
+
+@app.route('/fillDressDownRed')
+def runFillDownRed():
+    fillDressDown(strip, Color(0,255,0))
+    return "FillDressDownRed"
+
+@app.route('/SpiralDownWhite')
+def runSpiralDownWhite():
+    fillDressDown(strip, Color(0,255,0))
+    return "SpiralDownWhite"
+
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
