@@ -117,6 +117,18 @@
             alert("ColorWipeGreen")
         } 
         </script>
+
+      <button type="button" class="btn btn-primary btn-lg" onclick="callclear()">clear</button>
+      <script type="text/javascript">
+        function callclear()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/clear', true);
+            request.send();
+            alert("clear")
+        } 
+        </script>
+
       <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
   
