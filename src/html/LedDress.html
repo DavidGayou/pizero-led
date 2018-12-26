@@ -64,6 +64,17 @@
         } 
         </script>
 
+      <button type="button" class="btn btn-primary btn-lg" onclick="callRainbowCycle()">RainbowCycle</button>
+      <script type="text/javascript">
+        function callRainbowCycle()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/RainbowCycle', true);
+            request.send();
+            alert("RainbowCycle")
+        } 
+        </script>
+
       <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipeRed()">Color Wipe Red</button>
       <script type="text/javascript">
         function callColorWipeRed()
