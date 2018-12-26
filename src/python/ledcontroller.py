@@ -114,7 +114,6 @@ def runRainbow():
     rainbow(strip)
     return "Rainbow"
 
-
 @app.route('/ColorWipeRed')
 def runColorWipeRed():
     colorWipe(strip,Color(0, 255, 0))
@@ -144,6 +143,11 @@ def runRainbowCycle():
 def runTheaterChaseRainbow():
     theaterChaseRainbow(strip)
     return "theaterChaseRainbow"
+
+@app.route('/fillDressDownWhite')
+def runfillDressDownWhite():
+    fillDressDown (strip,Color(255, 255, 255))
+    return "fillDressDownWhite"
 
 @app.route('/clear')
 def runClear():
