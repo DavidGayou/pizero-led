@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="starter-template.css"
 
-    <title>LedDress!</title>
+    <title>Princess Led!</title>
   </head> 
   <body>
 
@@ -61,6 +61,17 @@
             request.open('GET', 'http://192.168.0.95:5000/rainbow', true);
             request.send();
             alert("Rainbow")
+        } 
+        </script>
+
+      <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipeRed()">Color Wipe Red</button>
+      <script type="text/javascript">
+        function callColorWipeRed()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/ColorWipeRed', true);
+            request.send();
+            alert("ColorWipeRed")
         } 
         </script>
       <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
