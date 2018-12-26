@@ -130,6 +130,11 @@ def runColorWipeGreen():
     colorWipe(strip,Color(255, 0, 0))
     return "ColorWipeGreen"
 
+@app.route('/ColorWipePurple')
+def runColorWipePurple():
+    colorWipe (strip, Color(157, 18, 255))
+    return "ColorWipePurple"
+
 @app.route('/RainbowCycle')
 def runRainbowCycle():
     rainbowCycle(strip)

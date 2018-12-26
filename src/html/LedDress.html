@@ -64,6 +64,27 @@
         } 
         </script>
 
+      <button type="button" class="btn btn-primary btn-lg" onclick="callRainbowCycle()">RainbowCycle</button>
+      <script type="text/javascript">
+        function callRainbowCycle()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/RainbowCycle', true);
+            request.send();
+            alert("RainbowCycle")
+        } 
+        </script>
+      <button type="button" class="btn btn-primary btn-lg" onclick="calltheaterChaseRainbow()">theaterChaseRainbow</button>
+      <script type="text/javascript">
+        function calltheaterChaseRainbow()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/theaterChaseRainbow', true);
+            request.send();
+            alert("theaterChaseRainbow")
+        } 
+        </script>
+
       <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipeRed()">Color Wipe Red</button>
       <script type="text/javascript">
         function callColorWipeRed()
@@ -74,6 +95,51 @@
             alert("ColorWipeRed")
         } 
         </script>
+      
+      <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipeBlue()">Color Wipe Blue</button>
+      <script type="text/javascript">
+        function callColorWipeBlue()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/ColorWipeBlue', true);
+            request.send();
+            alert("ColorWipeBlue")
+        } 
+        </script>
+
+      <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipeGreen()">Color Wipe Green</button>
+      <script type="text/javascript">
+        function callColorWipeGreen()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/ColorWipeGreen', true);
+            request.send();
+            alert("ColorWipeGreen")
+        } 
+        </script>
+
+      <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipePurple()">Color Wipe Purple</button>
+      <script type="text/javascript">
+        function callColorWipePurple()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/ColorWipePurple', true);
+            request.send();
+            alert("ColorWipePurple")
+        } 
+        </script>
+
+      <button type="button" class="btn btn-primary btn-lg" onclick="callclear()">clear</button>
+      <script type="text/javascript">
+        function callclear()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/clear', true);
+            request.send();
+            alert("clear")
+        } 
+        </script>
+
       <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
   
