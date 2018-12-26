@@ -118,6 +118,17 @@
         } 
         </script>
 
+      <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipePurple()">Color Wipe Purple</button>
+      <script type="text/javascript">
+        function callColorWipePurple()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/ColorWipePurple', true);
+            request.send();
+            alert("ColorWipePurple")
+        } 
+        </script>
+
       <button type="button" class="btn btn-primary btn-lg" onclick="callclear()">clear</button>
       <script type="text/javascript">
         function callclear()
