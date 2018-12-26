@@ -39,6 +39,26 @@ def fillDressUp(strip, color, wait_ms=50):
             strip.show()
         time.sleep(wait_ms/1000.0)
 
+def dressSpiralDown(strip, color, wait_ms=50):
+    iter = 0
+    step = 3
+    prevpos =0
+
+    litLed=dict()
+
+
+    for rpos in range(0, RIBBON_COUNT):
+        if !litLed[rpos]:
+            litLed[rpos]=[] 
+        for i in range(0,step):
+            p = (prevpos+i) % LED_PER_RIBBON
+            setDressPixel(strip, rpos, p, color)
+            litLed[rpos]=litLed[rpos]+p
+        prevpos = (prevpos + step) %LED_PER_RIBBON
+
+        strip.show()
+        time.sleep(wait_ms/1000.0)
+
 
 # Define functions which animate LEDs in various ways.
 def colorWipe(strip, color, wait_ms=50):
