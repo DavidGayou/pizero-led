@@ -22,21 +22,22 @@ RIBBON_COUNT = 10
 def setDressPixel(strip, ribbon_pos, pos_in_ribbon, color):
     """Color a specific led in the dress by providing the riboon and the pos in ribbon"""
     strip.setPixelColor(ribbon_pos*LED_PER_RIBBON + pos_in_ribbon, color)
-    strip.show()
 
-def fillDressDown(strip, color):
+def fillDressDown(strip, color, wait_ms=50):
     """Color the dress row by row from up to bottom"""
-    for lpos in range(LED_PER_RIBBON):
-        for rpos in range(RIBBON_COUNT):
+    for lpos in range(0, LED_PER_RIBBON):
+        for rpos in range(0, RIBBON_COUNT):
             setDressPixel(strip, rpos, lpos, color)
+            strip.show()
+        time.sleep(wait_ms/1000.0)
 
-def fillDressUp(strip, color):
+def fillDressUp(strip, color, wait_ms=50):
     """Color the dress row by row from up to bottom"""
-    for lpos in range(LED_PER_RIBBON):
-        for rpos in range(RIBBON_COUNT):
+    for lpos in range(0, LED_PER_RIBBON):
+        for rpos in range(0, RIBBON_COUNT):
             setDressPixel(strip, rpos, LED_PER_RIBBON - 1 - lpos, color)
-
-
+            strip.show()
+        time.sleep(wait_ms/1000.0)
 
 
 # Define functions which animate LEDs in various ways.
