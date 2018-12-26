@@ -74,6 +74,17 @@
             alert("ColorWipeRed")
         } 
         </script>
+      
+      <button type="button" class="btn btn-primary btn-lg" onclick="callColorWipeBlue()">Color Wipe Blue</button>
+      <script type="text/javascript">
+        function callColorWipeBlue()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/ColorWipeBlue', true);
+            request.send();
+            alert("ColorWipeBlue")
+        } 
+        </script>
       <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
   
