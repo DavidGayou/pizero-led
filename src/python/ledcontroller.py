@@ -43,7 +43,7 @@ def dressSpiralDown(strip, color, iter=10, step=3, wait_ms=50):
     prevpos =0
     litLed=dict()
 
-    for iter in range(0, iterCount):
+    for it in range(0, iter):
         for rpos in range(0, RIBBON_COUNT):
             if litLed[rpos] is None:
                 litLed[rpos]=[] 
@@ -66,7 +66,7 @@ def dressSpiralUp(strip, color, iter=10, step=3, wait_ms=50):
     prevpos =0
     litLed=dict()
 
-    for iter in range(0, iterCount):
+    for it in range(0, iter):
         for rpos in range(0, RIBBON_COUNT):
             if litLed[rpos] is None:
                 litLed[rpos]=[] 
