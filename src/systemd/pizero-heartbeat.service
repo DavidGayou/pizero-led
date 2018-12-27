@@ -5,7 +5,7 @@
  [Service]
  Type=idle
  User=pi
- ExecStart=/usr/bin/bash /home/pi/dev/pizero-led/src/sh/heartbeat.sh 
+ ExecStart=/bin/bash /home/pi/dev/pizero-led/src/sh/heartbeat.sh 
 
  [Install]
  WantedBy=multi-user.target
