@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 cd /home/pi/dev/pizero-led/
+curl trnfs.com/thisispizero
 sleep 10
 echo "Git fetch from pizero-led"
 /usr/bin/git fetch
