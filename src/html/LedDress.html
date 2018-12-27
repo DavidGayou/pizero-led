@@ -50,6 +50,17 @@
         } 
         </script>
         
+        <button type="button" class="btn btn-primary " onclick="callDebug()">Debug</button>
+        <script type="text/javascript">
+          function callDebug()
+          {
+              var request = new XMLHttpRequest();
+              request.open('GET', 'http://151.217.237.157:5000/debug', true);
+              request.send();
+              alert("debug")
+          } 
+          </script>  
+
       <button type="button" class="btn btn-primary " onclick="calltheaterChaseRainbow()">theaterChaseRainbow</button>
       <script type="text/javascript">
         function calltheaterChaseRainbow()
