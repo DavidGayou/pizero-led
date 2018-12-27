@@ -204,7 +204,7 @@ def runFillDownRed():
 
 @app.route('/SpiralDownWhite')
 def runSpiralDownWhite():
-    fillDressDown(strip, Color(0,255,0))
+    dressSpiralDown(strip, Color(255,255,255))
     return "SpiralDownWhite"
 
     
