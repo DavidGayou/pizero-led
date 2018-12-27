@@ -208,7 +208,7 @@ def runfillDressDownWhite():
 
 @app.route('/fillDressDownYellow')
 def runfillDressDownYellow():
-    fillDressDown (strip,color(255,255,0))
+    fillDressDown (strip, Color(255,255,0))
     return "fillDressDownYellow"
 
 @app.route('/clear')
