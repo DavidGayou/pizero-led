@@ -140,6 +140,18 @@
         } 
         </script>
 
+      <button type="button" class="btn btn-primary btn-lg" onclick="callfillDressDownYellow()">fill Dress Down Yello</button>
+      <script type="text/javascript">
+        function callfillDressDownYellow()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://192.168.0.95:5000/fillDressDownYellow', true);
+            request.send();
+            alert("fillDressDownYellow")
+        } 
+        </script>
+
+
       <button type="button" class="btn btn-primary btn-lg" onclick="callclear()">clear</button>
       <script type="text/javascript">
         function callclear()
