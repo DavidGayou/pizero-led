@@ -39,6 +39,53 @@ def fillDressUp(strip, color, wait_ms=50):
             strip.show()
         time.sleep(wait_ms/1000.0)
 
+def dressSpiralDown(strip, color, iter=10, step=3, wait_ms=50):
+    prevpos =0
+    litLed=dict()
+
+    for it in range(0, iter):
+        for rpos in range(0, RIBBON_COUNT):
+            if rpos not in litLed:
+                litLed[rpos]=[] 
+            
+            #Clean the leds 
+            for i in litLed[rpos]:
+                setDressPixel(strip, rpos, i, Color(0,0,0))
+            strip.show()
+
+            for i in range(0,step):
+                p = (prevpos+i) % LED_PER_RIBBON
+                setDressPixel(strip, rpos, p, color)
+                litLed[rpos]=litLed[rpos].append(p)
+            prevpos = (prevpos + step) %LED_PER_RIBBON
+
+            strip.show()
+            time.sleep(wait_ms/1000.0)
+
+def dressSpiralUp(strip, color, iter=10, step=3, wait_ms=50):
+    prevpos =0
+    litLed=dict()
+
+    for it in range(0, iter):
+        for rpos in range(0, RIBBON_COUNT):
+            if rpos not in litLed:
+                litLed[rpos]=[] 
+            
+            #Clean the leds 
+            for i in litLed[rpos]:
+                setDressPixel(strip, rpos, i, Color(0,0,0))
+            strip.show()
+
+            for i in range(0,step):
+                p = (prevpos+i) % LED_PER_RIBBON
+                setDressPixel(strip, rpos, p, color)
+                litLed[rpos]=litLed[rpos].append(p)
+            prevpos = (prevpos + step) %LED_PER_RIBBON
+
+            strip.show()
+            time.sleep(wait_ms/1000.0)
+
+
 
 # Define functions which animate LEDs in various ways.
 def colorWipe(strip, color, wait_ms=50):
@@ -158,6 +205,17 @@ def runfillDressDownYellow():
 def runClear():
     colorWipe(strip, Color(0,0,0), 10)
     return "clear"
+
+@app.route('/fillDressDownRed')
+def runFillDownRed():
+    fillDressDown(strip, Color(0,255,0))
+    return "FillDressDownRed"
+
+@app.route('/SpiralDownWhite')
+def runSpiralDownWhite():
+    dressSpiralDown(strip, Color(255,255,255))
+    return "SpiralDownWhite"
+
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
