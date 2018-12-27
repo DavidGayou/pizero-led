@@ -1,6 +1,7 @@
 
 import time
 from flask import Flask
+from flask_cors import CORS
 from neopixel import *
 
 
@@ -147,6 +148,7 @@ def theaterChaseRainbow(strip, wait_ms=50):
 
 
 app = Flask(__name__)
+CORS(app)
 
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
 # Intialize the library (must be called once before other functions).
