@@ -1,0 +1,11 @@
+[Unit]
+ Description=pizero-heartbeat service
+ After=multi-user.target
+
+ [Service]
+ Type=idle
+ User=pi
+ ExecStart=/usr/bin/bash /home/pi/dev/pizero-led/src/sh/heartbeat.sh 
+
+ [Install]
+ WantedBy=multi-user.target
