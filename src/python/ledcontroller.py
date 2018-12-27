@@ -45,7 +45,7 @@ def dressSpiralDown(strip, color, iter=10, step=3, wait_ms=50):
 
     for iter in range(0, iterCount):
         for rpos in range(0, RIBBON_COUNT):
-            if !litLed[rpos]:
+            if litLed[rpos] is None:
                 litLed[rpos]=[] 
             
             #Clean the leds 
@@ -68,7 +68,7 @@ def dressSpiralUp(strip, color, iter=10, step=3, wait_ms=50):
 
     for iter in range(0, iterCount):
         for rpos in range(0, RIBBON_COUNT):
-            if !litLed[rpos]:
+            if litLed[rpos] is None:
                 litLed[rpos]=[] 
             
             #Clean the leds 
