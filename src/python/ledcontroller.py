@@ -186,6 +186,11 @@ def runRainbowCycle():
     rainbowCycle(strip)
     return "RainbowCycle"
 
+@app.route('/theaterChaseRed')
+def runTheaterChase():
+    theaterChase(strip,Color(0,255,0))
+    return "theaterChaseRainbow"
+
 @app.route('/theaterChaseRainbow')
 def runTheaterChaseRainbow():
     theaterChaseRainbow(strip)

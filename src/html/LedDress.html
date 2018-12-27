@@ -39,6 +39,17 @@
             alert("RainbowCycle")
         } 
         </script>
+      <button type="button" class="btn btn-primary btn-lg" onclick="calltheaterChaseRed()">theaterChaseRed</button>
+      <script type="text/javascript">
+        function calltheaterChaseRed()
+        {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://151.217.237.157:5000/theaterChaseRed', true);
+            request.send();
+            alert("theaterChaseRed")
+        } 
+        </script>
+        
       <button type="button" class="btn btn-primary btn-lg" onclick="calltheaterChaseRainbow()">theaterChaseRainbow</button>
       <script type="text/javascript">
         function calltheaterChaseRainbow()
