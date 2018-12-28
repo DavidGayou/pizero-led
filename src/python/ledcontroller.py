@@ -213,6 +213,22 @@ def runfillDressDownYellow():
     fillDressDown (strip, Color(255,255,0))
     return "fillDressDownYellow"
 
+@app.route('/fillDressDownRed')
+def runfillDressDownRed():
+    fillDressDown (strip, Color(0,255,0))
+    return "fillDressDownRed"
+
+@app.route('/fillDressDownGreen')
+def runfillDressDownGreen():
+    fillDressDown (strip, Color(255,0,0))
+    return "fillDressDownGreen"
+
+@app.route('/fillDressDownBlue')
+def runfillDressDownBlue():
+    fillDressDown (strip, Color(0,0,255))
+    return "fillDressDownblue"
+
+
 @app.route('/clear')
 def runClear():
     colorWipe(strip, Color(0,0,0), 10)
