@@ -107,7 +107,7 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
             for i in range(0, strip.numPixels(), 3):
                 strip.setPixelColor(i+q, 0)
 
-def wheel(pos):G
+def wheel(pos):
     """Generate rainbow colors across 0-255 positions."""
     if pos < 85:
         return Color(pos * 3, 255 - pos * 3, 0)
