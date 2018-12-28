@@ -50,17 +50,6 @@
         } 
         </script>
         
-        <button type="button" class="btn btn-primary " onclick="callDebug()">Debug</button>
-        <script type="text/javascript">
-          function callDebug()
-          {
-              var request = new XMLHttpRequest();
-              request.open('GET', 'http://151.217.232.226:5000/debug', true);
-              request.send();
-              alert("debug")
-          } 
-          </script>  
-
       <button type="button" class="btn btn-primary " onclick="calltheaterChaseRainbow()">theaterChaseRainbow</button>
       <script type="text/javascript">
         function calltheaterChaseRainbow()
@@ -72,6 +61,7 @@
         } 
         </script>
 
+      <div>
       <button type="button" class="btn btn-primary " onclick="callColorWipeRed()">Color Wipe Red</button>
       <script type="text/javascript">
         function callColorWipeRed()
@@ -116,6 +106,8 @@
         } 
         </script>
       
+    </div>
+    <div>
       <button type="button" class="btn btn-primary " onclick="callfillDressDownWhite()">fill Dress Down White</button>
       <script type="text/javascript">
         function callfillDressDownWhite()
@@ -137,8 +129,8 @@
             alert("fillDressDownYellow")
         } 
         </script>
-
-
+      </div>
+      <div>
       <button type="button" class="btn btn-primary " onclick="callclear()">clear</button>
       <script type="text/javascript">
         function callclear()
@@ -150,6 +142,18 @@
         } 
         </script>
 
+        <button type="button" class="btn btn-primary " onclick="callDebug()">Debug</button>
+        <script type="text/javascript">
+          function callDebug()
+          {
+              var request = new XMLHttpRequest();
+              request.open('GET', 'http://151.217.232.226:5000/debug', true);
+              request.send();
+              alert("debug")
+          } 
+          </script>  
+
+        </div>
       <p class="lead">Use this website to control the led</p>
     </div>
   
