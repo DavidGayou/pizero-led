@@ -194,6 +194,7 @@ def runTheaterChase():
     return "theaterChaseRainbow"
 
 @app.route('/debug')
+@cross_origin()
 def debug():
     theaterChase(strip,Color(0,255,0),iterations=1000)
     return "theaterChaseRainbow"
