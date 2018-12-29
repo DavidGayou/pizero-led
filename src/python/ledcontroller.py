@@ -279,6 +279,12 @@ def runShootingStar():
     shootingStar(strip, 10)
     return "Shooting Star"
 
+@app.route('/shootingStarSlow')
+def runShootingStarSlow():
+    shootingStar(strip, 10, 100)
+    return "Shooting Star Slow"
+
+
 @app.route('/clear')
 def runClear():
     colorWipe(strip, Color(0,0,0), 10)

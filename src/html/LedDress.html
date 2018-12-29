@@ -144,6 +144,17 @@
               alert("shootingStar")
           } 
           </script>
+
+          <button type="button" class="btn btn-primary " onclick="callShootingStarSlow()">ShootingStarSlow</button>
+          <script type="text/javascript">
+            function callShootingStarSlow()
+            {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'http://151.217.214.98:5000/shootingStarSlow', true);
+                request.send();
+                alert("shootingStarSlow")
+            } 
+            </script>
       </div>
 
       <div>
