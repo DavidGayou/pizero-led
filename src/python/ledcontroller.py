@@ -233,17 +233,17 @@ def runRainbowCycle():
     return "RainbowCycle"
 
 @app.route('/theaterChaseRed')
-def runTheaterChase():
+def runTheaterChaseRed():
     theaterChase(strip,Color(0,255,0))
     return "theaterChaseRainbow"
 
 @app.route('/theaterChaseGreen')
-def runTheaterChase():
+def runTheaterChaseGreen():
     theaterChase(strip,Color(255,0,0))
     return "theaterChaseRainbow"
 
 @app.route('/theaterChaseBlue')
-def runTheaterChase():
+def runTheaterChaseBlue():
     theaterChase(strip,Color(0,0,255))
     return "theaterChaseRainbow"
 
