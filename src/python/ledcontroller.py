@@ -145,7 +145,7 @@ def theaterChaseRainbow(strip, wait_ms=50):
             for i in range(0, strip.numPixels(), 3):
                 strip.setPixelColor(i+q, 0)
 
-def shootingStarAtPos(strip, pos, queue_length)
+def shootingStarAtPos(strip, pos, queue_length):
     headColor = Color(255,255,255)
     strip.setPixelColor(pos, headColor)
     
@@ -157,7 +157,7 @@ def shootingStarAtPos(strip, pos, queue_length)
     
 
 def shootingStar(strip, queue_length=5, wait_ms=10):
-    """shooting star accross the ribbon""""
+    """shooting star accross the ribbon"""
 
     for i in range(0,LED_COUNT):
         shootingStarAtPos(strip, i, queue_length)
