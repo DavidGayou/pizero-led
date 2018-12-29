@@ -149,9 +149,12 @@ def shootingStarAtPos(strip, pos, queue_length):
     headColor = Color(255,255,255)
     strip.setPixelColor(pos, headColor)
     
+    colorStep = 155 / (queue_length)+1
+
+
     for i in range(0,queue_length):
         if (pos-i) >= 0:
-            queuePosColor=155-(10*i)
+            queuePosColor=155-(colorStep*i)
             strip.setPixelColor(pos-i, Color(queuePosColor, queuePosColor, queuePosColor) )
     if (pos - queue_length) >= 0:
         strip.setPixelColor(pos-queue_length, Color(0, 0, 0) )
