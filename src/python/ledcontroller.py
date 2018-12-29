@@ -149,6 +149,11 @@ def shootingStarAtPosWithClean(strip,pos,queue_length):
     shootingStarAtPos(strip,pos,queue_length)
     if (pos - queue_length) >= 0:
         strip.setPixelColor(pos-queue_length, Color(0, 0, 0) )
+    #Clean the queue when last in ribbon
+    if pos == LED_COUNT-1:
+        for i in range(pos, queue_length, -1):
+            strip.setPixelColor(i, Color(0, 0, 0) )
+
 
 def shootingStarAtPos(strip, pos, queue_length):
     headColor = Color(255,255,255)
