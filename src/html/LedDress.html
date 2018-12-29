@@ -119,9 +119,40 @@
         } 
         </script>
 
+        <button type="button" class="btn btn-primary " onclick="callfillDressDownGreen()">fill Dress Green</button>
+        <script type="text/javascript">
+          function callfillDressDownGreen()
+          {
+              var request = new XMLHttpRequest();
+              request.open('GET', 'http://151.217.214.98:5000/fillDressDownGreen', true);
+              request.send();
+              alert("fillDressDownGreen")
+          } 
+          </script>
 
+          <button type="button" class="btn btn-primary " onclick="callfillDressDownRed()">fill Dress Red</button>
+          <script type="text/javascript">
+            function callfillDressDownRed()
+            {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'http://151.217.214.98:5000/fillDressDownRed', true);
+                request.send();
+                alert("fillDressDownRed")
+            } 
+            </script>
 
-      <button type="button" class="btn btn-primary " onclick="callfillDressDownYellow()">fill Dress Down Yello</button>
+            <button type="button" class="btn btn-primary " onclick="callfillDressDownBlue()">fill Dress Blue</button>
+            <script type="text/javascript">
+              function callfillDressDownBlue()
+              {
+                  var request = new XMLHttpRequest();
+                  request.open('GET', 'http://151.217.214.98:5000/fillDressDownBlue', true);
+                  request.send();
+                  alert("fillDressDownBlue")
+              } 
+              </script>
+
+      <button type="button" class="btn btn-primary " onclick="callfillDressDownYellow()">fill Dress Down Yellow</button>
       <script type="text/javascript">
         function callfillDressDownYellow()
         {
