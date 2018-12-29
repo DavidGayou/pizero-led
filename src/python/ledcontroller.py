@@ -145,6 +145,23 @@ def theaterChaseRainbow(strip, wait_ms=50):
             for i in range(0, strip.numPixels(), 3):
                 strip.setPixelColor(i+q, 0)
 
+def shootingStarAtPos(strip, pos, queue_length)
+    headColor = Color(255,255,255)
+    strip.setPixelColor(pos, headColor)
+    
+    for i in range(0,queue_length):
+        if (pos-i) > 0:
+            queuePosColor=155-(10*i)
+            strip.setPixel(pos-i, Color(queuePosColor, queuePosColor, queuePosColor) )
+
+    
+
+def shootingStar(strip, queue_length=5, wait_ms=10):
+    """shooting star accross the ribbon""""
+
+    for i in range(0,LED_COUNT):
+        shootingStarAtPos(strip, i, queue_length)
+        sleep.wait(wait_ms)
 
 
 app = Flask(__name__)
@@ -203,6 +220,9 @@ def runTheaterChaseRainbow():
     theaterChaseRainbow(strip)
     return "theaterChaseRainbow"
 
+#############
+#FILL DRESS
+
 @app.route('/fillDressDownWhite')
 def runfillDressDownWhite():
     fillDressDown (strip,Color(255, 255, 255))
@@ -228,16 +248,23 @@ def runfillDressDownBlue():
     fillDressDown (strip, Color(0,0,255))
     return "fillDressDownblue"
 
+@app.route('/fillDressDownRed')
+def runFillDownRed():
+    fillDressDown(strip, Color(0,255,0))
+    return "FillDressDownRed"
+
+#######
+# Shooting Star
+
+@app.route('/shootingStar')
+def runShootingStar():
+    shootingStar(strip, 10)
+    return "Shooting Star"
 
 @app.route('/clear')
 def runClear():
     colorWipe(strip, Color(0,0,0), 10)
     return "clear"
-
-@app.route('/fillDressDownRed')
-def runFillDownRed():
-    fillDressDown(strip, Color(0,255,0))
-    return "FillDressDownRed"
 
 @app.route('/SpiralDownWhite')
 def runSpiralDownWhite():
