@@ -145,6 +145,11 @@ def theaterChaseRainbow(strip, wait_ms=50):
             for i in range(0, strip.numPixels(), 3):
                 strip.setPixelColor(i+q, 0)
 
+def shootingAtPosWithClean(strip,pos,queue_lenght):
+    shootingsStarAtPos(strip,pos,queue_lenght)
+    if (pos - queue_length) >= 0:
+        strip.setPixelColor(pos-queue_length, Color(0, 0, 0) )
+
 def shootingStarAtPos(strip, pos, queue_length):
     headColor = Color(255,255,255)
     strip.setPixelColor(pos, headColor)
@@ -168,8 +173,7 @@ def shootingStarAtPos(strip, pos, queue_length):
             if queuePosBlue < 0 :
                 queuePosBlue = 0
             strip.setPixelColor(pos-i, Color(queuePosGreen, queuePosRed, queuePosBlue) )
-    if (pos - queue_length) >= 0:
-        strip.setPixelColor(pos-queue_length, Color(0, 0, 0) )
+
 
     
 
@@ -177,7 +181,7 @@ def shootingStar(strip, queue_length=5, wait_ms=10):
     """shooting star accross the ribbon"""
 
     for i in range(0,LED_COUNT):
-        shootingStarAtPos(strip, i, queue_length)
+        shootingStarAtPosWithClean(strip, i, queue_length)
         strip.show()
         time.sleep(wait_ms/1000.0)
 
