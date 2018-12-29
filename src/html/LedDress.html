@@ -49,7 +49,31 @@
             alert("theaterChaseRed")
         } 
         </script>
-        
+
+        <button type="button" class="btn btn-primary " onclick="calltheaterChaseGreen()">theaterChaseGreen</button>
+        <script type="text/javascript">
+          function calltheaterChaseGreen()
+          {
+              var request = new XMLHttpRequest();
+              request.open('GET', 'http://151.217.214.98:5000/theaterChaseGreen', true);
+              request.send();
+              alert("theaterChaseGreen")
+          } 
+          </script>
+
+          <button type="button" class="btn btn-primary " onclick="calltheaterChaseBlue()">theaterChaseBlue</button>
+          <script type="text/javascript">
+            function calltheaterChaseBlue()
+            {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'http://151.217.214.98:5000/theaterChaseBlue', true);
+                request.send();
+                alert("theaterChaseBlue")
+            } 
+            </script>
+
+
+
       <button type="button" class="btn btn-primary " onclick="calltheaterChaseRainbow()">theaterChaseRainbow</button>
       <script type="text/javascript">
         function calltheaterChaseRainbow()

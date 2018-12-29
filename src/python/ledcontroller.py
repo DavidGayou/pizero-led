@@ -237,6 +237,16 @@ def runTheaterChase():
     theaterChase(strip,Color(0,255,0))
     return "theaterChaseRainbow"
 
+@app.route('/theaterChaseGreen')
+def runTheaterChase():
+    theaterChase(strip,Color(255,0,0))
+    return "theaterChaseRainbow"
+
+@app.route('/theaterChaseBlue')
+def runTheaterChase():
+    theaterChase(strip,Color(0,0,255))
+    return "theaterChaseRainbow"
+
 @app.route('/debug')
 def debug():
     theaterChase(strip,Color(0,255,0),iterations=1000)
