@@ -150,8 +150,8 @@ def shootingStarAtPos(strip, pos, queue_length):
     strip.setPixelColor(pos, headColor)
 
     queueRedValue= 255
-    queueGreenValue=0
-    queueBlueValue=0    
+    queueGreenValue=178
+    queueBlueValue=102 
     redStep = queueRedValue / (queue_length)+1
     greenStep = queueGreenValue / (queue_length)+1
     blueStep = queueBlueValue / (queue_length)+1
