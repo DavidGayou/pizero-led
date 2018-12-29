@@ -146,7 +146,7 @@ def theaterChaseRainbow(strip, wait_ms=50):
                 strip.setPixelColor(i+q, 0)
 
 def shootingStarAtPosWithClean(strip,pos,queue_length):
-    shootingStarAtPos(strip,pos,queue_lenght)
+    shootingStarAtPos(strip,pos,queue_length)
     if (pos - queue_length) >= 0:
         strip.setPixelColor(pos-queue_length, Color(0, 0, 0) )
 
