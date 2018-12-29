@@ -161,7 +161,8 @@ def shootingStar(strip, queue_length=5, wait_ms=10):
 
     for i in range(0,LED_COUNT):
         shootingStarAtPos(strip, i, queue_length)
-        sleep.wait(wait_ms)
+        strip.show()
+        time.sleep(wait_ms/1000.0)
 
 
 app = Flask(__name__)
