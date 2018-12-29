@@ -132,6 +132,20 @@
         } 
         </script>
       </div>
+      <br/>
+      <div>
+        <button type="button" class="btn btn-primary " onclick="callShootingStar()">ShootingStar</button>
+        <script type="text/javascript">
+          function callShootingStar()
+          {
+              var request = new XMLHttpRequest();
+              request.open('GET', 'http://151.217.214.98:5000/shootingStar', true);
+              request.send();
+              alert("shootingStar")
+          } 
+          </script>
+      </div>
+
       <div>
       <button type="button" class="btn btn-primary " onclick="callclear()">clear</button>
       <script type="text/javascript">
